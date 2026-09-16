@@ -82,7 +82,7 @@ app.delete("/chats/:id", async(req,res)=>{
   res.redirect("/chats");
 });
 app.get("/",(req,res)=>{
-  res.send("/chats");
+  res.redirect("/chats");
 })
 app.listen(8080,()=>{
   console.log("server is listening on port 8080");
