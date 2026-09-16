@@ -4,15 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit your chat</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
-  <p>Edit your chat:</p>
-  <p>This chat was sent from <b><%= chat.from %></b> to <b><%=chat.to%></b></p>
+<body class="bg-light">
 
-  <form method="POST" action="/chats/<%= chat._id%>?_method=PUT">
-    <textarea name="msg" rows="6" cols="50"><%= chat.msg %></textarea>
-    <br/>
-    <button>Edit</button>
-  </form>
+    <div class="container py-4">
+
+        <div class="card shadow-sm" style="max-width: 600px;">
+
+            <div class="card-body">
+
+                <h3 class="mb-3">Edit Your Chat</h3>
+
+                <p>
+                    This chat was sent from
+                    <strong><%= chat.from %></strong>
+                    to
+                    <strong><%= chat.to %></strong>
+                </p>
+
+                <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+
+                        <textarea
+                            class="form-control"
+                            name="msg"
+                            rows="5"
+                        ><%= chat.msg %></textarea>
+                    </div>
+
+                    <button class="btn btn-primary">
+                        Edit Chat
+                    </button>
+
+                    <a href="/chats" class="btn btn-secondary">
+                        Cancel
+                    </a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,15 +1,49 @@
-body{
-  margin-left:20px;
+body {
+    margin: 20px;
+    background-color: #f5f7fb;
+    font-family: Arial, sans-serif;
 }
-.chat{
-  background-color:aliceblue;
-  padding:20px;
-  border-radius:16px;
-  display:inline-block;
+
+h2 {
+    margin-bottom: 20px;
 }
-.msg{
-  background-color: dodgerblue;
-  color:white;
-  padding:5px 15px;
-  border-radius:16px;
+
+.chat {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    display: inline-block;
+    margin: 10px;
+    min-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.msg {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 16px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.chat p {
+    margin: 6px 0;
+}
+
+.chat button {
+    margin: 3px;
+}
+
+.chat hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+input,
+textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
